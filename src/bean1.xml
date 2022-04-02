@@ -4,7 +4,17 @@
        xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="userBean" class="com.springtest.dao.User"></bean>
+    <!--springIOC容器的bean管理包含两部分
+    1-bean的创建
+    2-bean的属性注入
+
+    在代码层面，这两部分也是分开的
+    其中属性注入有很多种方法，
+    但是bean的创建都是依赖于无参构造
+    -->
+
+    <!--<bean id="userBean" class="com.springtest.dao.User" scope="prototype"></bean>-->
+    <bean id="userBean" class="com.springtest.dao.User" scope="singleton"></bean>
 
 
 

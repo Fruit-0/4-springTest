@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--scope="singleton"
+    单例模式  bean在初始化容器的时候就已经创建
+
+    -->
+    <!--scope="prototype"
+    多例模式，bean在被调用的时候才执行
+
+    -->
+
+
+    <bean id="manBean" class="com.springtest.dao.Man" init-method="initMan" destroy-method="destroyMan" scope="singleton"></bean>
+    <bean id="womanBean" class="com.springtest.dao.Woman" init-method="initWoman" destroy-method="destroyWoman" scope="prototype"></bean>
+
+    <bean id="dealObject" class="com.springtest.dao.DealObject"></bean>
+
+
+</beans>
